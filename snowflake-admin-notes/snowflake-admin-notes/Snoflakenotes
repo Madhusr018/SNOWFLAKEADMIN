@@ -1,1 +1,4 @@
 
+This is how we will connect to snowflake via cli.
+snowsql -a <account_name> -u <user_name>
+snowsql -a RKQLGGR-QA69395 -u MADHUSUDHANREDDY
