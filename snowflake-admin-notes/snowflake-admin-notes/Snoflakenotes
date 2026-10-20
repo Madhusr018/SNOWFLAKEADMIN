@@ -10,13 +10,40 @@ snowsql -a RKQLGGR-QA69395 -u MADHUSUDHANREDDY -w COMPUTE_WH -d TEST
 show databases;
 show tables;
 
-(3)To switch database;
-
-(4)How to switch database
+(3)HOW To switch to CONTEXT 
+---------------------------
 MADHUSUDHANREDDY#COMPUTE_WH@TEST.(no schema)>use SNOWFLAKE;
 MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.(no schema)>
 
-(5)How to switch schema
+USE DATABASE SALES_DB;
+USE SCHEMA PUBLIC;
+USE WAREHOUSE COMPUTE_WH;
+
+
+(4)How to switch schema
+------------------------
 MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.(no schema)>use schema local;
 MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.LOCAL>
+
+
+(5)How to check current SESSSION:
+---------------------------------
+SELECT CURRENT_USER();
+SELECT CURRENT_DATABASE();
+SELECT CURRENT_SCHEMA();
+SELECT CURRENT_WAREHOUSE();
+
+(6)create Database Objects:
+--------------------------------
+
+CREATE DATABASE DEMO_DB;
+CREATE SCHEMA DEMO_SCHEMA;
+CREATE TABLE CUSTOMERS ( CUSTOMER_ID INT,CUSTOMER_NAME STRING,CITY STRING);
+
+
+
+
+
+
+
 
