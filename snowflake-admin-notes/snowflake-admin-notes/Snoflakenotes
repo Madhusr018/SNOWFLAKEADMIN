@@ -2,3 +2,21 @@
 This is how we will connect to snowflake via cli.
 snowsql -a <account_name> -u <user_name>
 snowsql -a RKQLGGR-QA69395 -u MADHUSUDHANREDDY
+
+(2) To connect to the snowflake using cli.
+snowsql -a <account_name> -u <user_name> -w <warehouse_name> -d <database_name>
+snowsql -a RKQLGGR-QA69395 -u MADHUSUDHANREDDY -w COMPUTE_WH -d TEST
+
+show databases;
+show tables;
+
+(3)To switch database;
+
+(4)How to switch database
+MADHUSUDHANREDDY#COMPUTE_WH@TEST.(no schema)>use SNOWFLAKE;
+MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.(no schema)>
+
+(5)How to switch schema
+MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.(no schema)>use schema local;
+MADHUSUDHANREDDY#COMPUTE_WH@SNOWFLAKE.LOCAL>
+
