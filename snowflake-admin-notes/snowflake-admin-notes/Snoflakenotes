@@ -40,6 +40,25 @@ CREATE DATABASE DEMO_DB;
 CREATE SCHEMA DEMO_SCHEMA;
 CREATE TABLE CUSTOMERS ( CUSTOMER_ID INT,CUSTOMER_NAME STRING,CITY STRING);
 
+(7)Upload file using SnowSQL:
+-----------------------------
+USER_STAGE:
+-----------
+PUT 'file://C:/Users/panga/Downloads/memory_checks.xlsx' @~;
+
+
+
+
+(8)Check Uploaded files:
+---------------------------
+
+LIST @~;
+LIST @%CUSTOMERS;
+
+(9)DHOWNLOAD FILES FROM STAGE to local mechine:
+-------------------------------------------------
+
+GET @~/memory_checks.xlsx 'file://C:/Users/panga/';
 
 
 
